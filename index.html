@@ -1,33 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Landing Page</title>
-</head>
-<body>
+    <style>
+      body {
+        padding-top: 130px;
+        margin: 0;
+      }
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      #header {
+        background: yellow;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      #header .centre-block {
+        display: flex;
+        justify-content: space-between;
+        max-width: 960px;
+        padding: 15px;
+        margin: 0 auto;
+      }
+      #header img {
+        width: 182px;
+        height: 60px;
+      }
+      #nav-bar {
+        width: 50%;
+        min-height: 100%;
+      }
+      #nav-bar ul {
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+      #nav-bar ul li {
+        flex: auto;
+        text-align: right;
+        padding-left: 15px;
+      }
+    </style>
+  </head>
+  <body>
     <div id="container">
-        <header id="header">
-            <!-- TODO: add logo image -->
-            <img src="#" alt="company logo" id="header-img">
-            <nav id="nav-bar">
-                <ul>
-                    <!-- TODO: add paths to links -->
-                    <li><a href="#" class="nav-link"></a></li>
-                    <li><a href="#" class="nav-link"></a></li>
-                    <li><a href="#" class="nav-link"></a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <form action="https://www.freecodecamp.com/email-submit" id="form">
-            <input type="email" name="email" id="email" placeholder="johndoe@gmail.com">
-            <input type="submit" value="Get Started" id="submit">
-        </form>
-
-        
+      <header id="header">
+        <div class="centre-block">
+          <img src="logo.png" alt="Charvel Guitars logo" id="header-img" />
+          <nav id="nav-bar">
+            <ul>
+              <!-- TODO: add paths to links -->
+              <li><a href="#" class="nav-link">Link1</a></li>
+              <li><a href="#" class="nav-link">Link2</a></li>
+              <li><a href="#" class="nav-link">Link3</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- TODO:  -->
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="johndoe@gmail.com"
+        />
+        <input type="submit" value="Get Started" id="submit" />
+      </form>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-</body>
+  </body>
 </html>
