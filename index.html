@@ -7,7 +7,7 @@
     <title>Product Landing Page</title>
     <style>
       body {
-        padding-top: 130px;
+        padding-top: 90px;
         margin: 0;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
@@ -17,6 +17,9 @@
         padding: 0;
         margin: 0;
         list-style-type: none;
+      }
+      .center {
+        text-align: center;
       }
       #header {
         background: yellow;
@@ -60,34 +63,98 @@
       #nav-bar a:active {
         color: #666;
       }
+      #form-background {
+        padding: 15px 0;
+        background-image: url("/guitars.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      #form-heading {
+        font-size: 2rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        text-shadow: #000 2px 2px 5px;
+      }
+      .container {
+        max-width: 930px;
+        padding: 15px;
+        margin: 0 auto;
+      }
+      input[type="email"] {
+        text-align: center;
+        font-size: 1rem;
+        color: #676767;
+        width: 50%;
+        max-width: 360px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        border: solid 3px gold;
+        box-sizing: border-box;
+      }
+      input[type="email"]:focus {
+        border: solid 3px yellow;
+      }
+      input[type="submit"] {
+        background: gold;
+        font-weight: bold;
+        margin: 0.75em 0 1em;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 3.5rem / 100%;
+        max-width: 90vw;
+        overflow: hidden;
+        border: 0;
+        /* outline: gold; */
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      input[type="submit"]:hover,
+      input[type="submit"]:active {
+        background: yellow;
+      }
     </style>
   </head>
   <body>
-    <div id="container">
-      <header id="header">
-        <div class="centre-block">
-          <img src="logo.png" alt="Charvel Guitars logo" id="header-img" />
-          <nav id="nav-bar">
-            <ul>
-              <!-- TODO: add paths to links -->
-              <li><a href="#" class="nav-link">Link1</a></li>
-              <li><a href="#" class="nav-link">Link2</a></li>
-              <li><a href="#" class="nav-link">Link3</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <!-- TODO:  -->
-      <form action="https://www.freecodecamp.com/email-submit" id="form">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="johndoe@gmail.com"
-        />
-        <input type="submit" value="Get Started" id="submit" />
+    <header id="header">
+      <div class="centre-block">
+        <img src="logo.png" alt="Charvel Guitars logo" id="header-img" />
+        <nav id="nav-bar">
+          <ul>
+            <!-- TODO: add paths to links -->
+            <li><a href="#" class="nav-link">Subscribe</a></li>
+            <li><a href="#" class="nav-link">About Charvel</a></li>
+            <li><a href="#" class="nav-link">Find a Dealer</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="form-background">
+      <h3 id="form-heading" class="center">Subscribe for updates</h3>
+      <form
+        class="center"
+        action="https://www.freecodecamp.com/email-submit"
+        id="form"
+      >
+        <p>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="johndoe@gmail.com"
+            autocomplete="off"
+          />
+        </p>
+        <p>
+          <input type="submit" value="Get Started" id="submit" />
+        </p>
       </form>
     </div>
+    <!-- TODO - Add features section -->
+    <!-- TODO - Add Embedded Video section -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
