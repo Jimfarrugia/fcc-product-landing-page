@@ -22,6 +22,12 @@
       .center {
         text-align: center;
       }
+      .anchor {
+        display: block;
+        position: relative;
+        top: -105px;
+        visibility: hidden;
+      }
       #about img {
         float: left;
         margin-right: 1em;
@@ -88,7 +94,7 @@
         background: #f5f5f5;
         max-width: 930px;
         padding: 15px;
-        margin: 0 auto;
+        margin: 1em auto;
       }
       .container p {
         line-height: 1.25;
@@ -127,6 +133,10 @@
       input[type="submit"]:active {
         background: yellow;
       }
+      #artists iframe {
+        width: 100%;
+        height: 240px;
+      }
     </style>
   </head>
   <body>
@@ -135,15 +145,17 @@
         <img src="logo.png" alt="Charvel Guitars logo" id="header-img" />
         <nav id="nav-bar">
           <ul>
-            <!-- TODO: add paths to links -->
-            <li><a href="#" class="nav-link">Subscribe</a></li>
-            <li><a href="#" class="nav-link">About Charvel</a></li>
-            <li><a href="#" class="nav-link">Find a Dealer</a></li>
+            <li><a href="#form-anchor" class="nav-link">Subscribe</a></li>
+            <li><a href="#about-anchor" class="nav-link">About</a></li>
+            <li>
+              <a href="#artists-anchor" class="nav-link">Artists</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <div id="form-background">
+      <div class="anchor" id="form-anchor"></div>
       <h3 id="form-heading" class="center">Subscribe for updates</h3>
       <form
         class="center"
@@ -164,74 +176,92 @@
         </p>
       </form>
     </div>
-    <div class="container">
-      <div id="about">
-        <h2>The Story of Charvel</h2>
-        <p>
-          The birthplace of many legendary guitarists, Southern California is
-          also home to one of the original innovators of high performance
-          guitars—Charvel®. Charvel guitars are the very embodiment of
-          high-performance tone machines, and discerning players who prize
-          superior sound and feel have turned to the company's finely crafted
-          guitars as their weapons of choice for more than 30 years. From metal
-          masters including Warren DeMartini and Jake E Lee to instrumental
-          fusion legends such as Allan Holdsworth and Shawn Lane to modern day
-          virtuosos like Guthrie Govan, musicians worldwide have long relied on
-          Charvel for exceptional guitar design.
-        </p>
-        <p>
-          High-end "hot-rodded" appointments considered extraordinary on lesser
-          instruments are standard features on most Charvel guitars. These
-          include compound-radius fingerboards, exceptionally hot pickups
-          designed to send amps into screaming overdrive, Floyd Rose® bridge
-          tremolo systems, customized electronics, heavy-duty hardware and
-          highly original (even outlandish) textural and graphic finishes.
-        </p>
-        <img
-          src="charvel-repairs.jpg"
-          alt="Charvel's Guitar Repair - the first storefront"
-        />
-        <p>
-          That devotion to tone, performance and innovation and to meeting the
-          unique design needs of technically advanced guitarists is nothing new.
-          It all dates back to Charvel's original home and formative
-          years—Southern California in the late 1970s.
-        </p>
-        <p>
-          Charvel shares DNA and deep roots with Jackson guitars, and in the
-          late 1970s it was Grover Jackson who built the first guitars bearing
-          the Charvel name. Jackson had worked at Charvel's Guitar Repair, a
-          small shop in Azusa, Calif., that specialized in hot-rodding
-          traditional electric guitars, before he bought the company from
-          founder Wayne Charvel in late 1978. Jackson quickly began building
-          traditional-style electric guitars loaded with high-performance
-          refinements, to which he applied the Charvel name. The guitars debuted
-          in summer 1979 and steadily gained acclaim, especially among a flashy
-          new early-'80s generation of dazzlingly talented Southern California
-          guitarists.
-        </p>
-        <p>
-          In addition to those fine early Charvel instruments, Grover Jackson
-          soon embarked on a second line of guitars bearing his own name. But
-          from those late-'70s days onward, Charvel forged its own distinctive
-          identity and earned its own sterling reputation for producing
-          hot-rodded-yet-classy "muscle car" guitars preferred by many of the
-          world's most technically accomplished players, notably in the metal
-          and fusion worlds.
-        </p>
-        <p>
-          In each era since its arrival—the 1980s, 1990s, 2000s and right on
-          through to today—Charvel has offered innovative and original guitar
-          models with the very best in high-performance design and features.
-          With the modern-era DK24 platform, several new remarkable artist
-          models, and the time-honored San Dimas and So-Cal models, Charvel
-          continues to forge a very bright high-performance future for
-          guitarists everywhere.
-        </p>
-      </div>
+    <div id="about" class="container">
+      <div class="anchor" id="about-anchor"></div>
+      <h2>The Story of Charvel</h2>
+      <p>
+        The birthplace of many legendary guitarists, Southern California is also
+        home to one of the original innovators of high performance
+        guitars—Charvel®. Charvel guitars are the very embodiment of
+        high-performance tone machines, and discerning players who prize
+        superior sound and feel have turned to the company's finely crafted
+        guitars as their weapons of choice for more than 30 years. From metal
+        masters including Warren DeMartini and Jake E Lee to instrumental fusion
+        legends such as Allan Holdsworth and Shawn Lane to modern day virtuosos
+        like Guthrie Govan, musicians worldwide have long relied on Charvel for
+        exceptional guitar design.
+      </p>
+      <p>
+        High-end "hot-rodded" appointments considered extraordinary on lesser
+        instruments are standard features on most Charvel guitars. These include
+        compound-radius fingerboards, exceptionally hot pickups designed to send
+        amps into screaming overdrive, Floyd Rose® bridge tremolo systems,
+        customized electronics, heavy-duty hardware and highly original (even
+        outlandish) textural and graphic finishes.
+      </p>
+      <img
+        src="charvel-repairs.jpg"
+        alt="Charvel's Guitar Repair - the first storefront"
+      />
+      <p>
+        That devotion to tone, performance and innovation and to meeting the
+        unique design needs of technically advanced guitarists is nothing new.
+        It all dates back to Charvel's original home and formative
+        years—Southern California in the late 1970s.
+      </p>
+      <p>
+        Charvel shares DNA and deep roots with Jackson guitars, and in the late
+        1970s it was Grover Jackson who built the first guitars bearing the
+        Charvel name. Jackson had worked at Charvel's Guitar Repair, a small
+        shop in Azusa, Calif., that specialized in hot-rodding traditional
+        electric guitars, before he bought the company from founder Wayne
+        Charvel in late 1978. Jackson quickly began building traditional-style
+        electric guitars loaded with high-performance refinements, to which he
+        applied the Charvel name. The guitars debuted in summer 1979 and
+        steadily gained acclaim, especially among a flashy new early-'80s
+        generation of dazzlingly talented Southern California guitarists.
+      </p>
+      <p>
+        In addition to those fine early Charvel instruments, Grover Jackson soon
+        embarked on a second line of guitars bearing his own name. But from
+        those late-'70s days onward, Charvel forged its own distinctive identity
+        and earned its own sterling reputation for producing
+        hot-rodded-yet-classy "muscle car" guitars preferred by many of the
+        world's most technically accomplished players, notably in the metal and
+        fusion worlds.
+      </p>
+      <p>
+        In each era since its arrival—the 1980s, 1990s, 2000s and right on
+        through to today—Charvel has offered innovative and original guitar
+        models with the very best in high-performance design and features. With
+        the modern-era DK24 platform, several new remarkable artist models, and
+        the time-honored San Dimas and So-Cal models, Charvel continues to forge
+        a very bright high-performance future for guitarists everywhere.
+      </p>
     </div>
-    <!-- TODO - Add Embedded Video section -->
-    <!-- TODO - Add media query to make 'about' section's image a centred block element on small screens -->
+    <div id="artists" class="container">
+      <div class="anchor" id="artists-anchor"></div>
+      <h2>Charvel Signature Artists</h2>
+      <h3>Angel Vivaldi</h3>
+      <iframe
+        id="video"
+        src="https://www.youtube.com/embed/ltmBMpE9fQw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <h3>Satchel of Steel Panther</h3>
+      <iframe
+        src="https://www.youtube.com/embed/ziD3NnRZtrE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <!-- TODO - Add media query to make videos taller on larger screens -->
+    <!-- TODO - Add footer with link to Charvel website -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
